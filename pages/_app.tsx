@@ -6,7 +6,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import Router from "next/router";
 import { GTMPageView } from "../utility/gtm";
-// import Announcement from "../components/Announcement";
+import Announcement from "../components/Announcement";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </div>
         )}
-        {/* <Announcement /> */}
+        <Announcement />
       </MantineProvider>
     </>
   );

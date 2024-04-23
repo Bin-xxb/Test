@@ -53,7 +53,7 @@ export default function Announcement() {
             left: variable.spacer0,
             maxWidth: "550px",
             padding: variable.spacer5,
-            background: "url('/assets/cmsImages/herobanner.full.svg')",
+            background: "url('/assets/cmsImages/herobanner.full-red.svg')",
             color: theme.white,
             zIndex: 1000,
             border: "1px solid rgba(255,255,255,0.3)",
@@ -64,7 +64,7 @@ export default function Announcement() {
         >
           <Box
             sx={{
-              width: "calc(50% - 4px)",
+              width: "calc(55% - 4px)",
               float: "left",
               marginRight: variable.spacer1,
               "@media(max-width: 480px)": {
@@ -73,12 +73,12 @@ export default function Announcement() {
             }}
           >
             <Text>
-            Join the Heart Foundation’s clinical webinar on 15 November as our experts showcase the effective use of the Aus CVD Risk Calculator through live demo and case-based presentations.
+              Get involved in Heart Week (6-12 May) - access new resources, encourage your patients to get a Heart Health Check and use the new Aus CVD Risk calculator.
             </Text>
             <Button
               component="a"
               target="_blank"
-              href="https://heartfoundation-au.zoom.us/webinar/register/4116986387987/WN_qqRqCo3YR7qeUewP192PPQ"
+              href="https://www.heartfoundation.org.au/heart-week?&utm_source=cvdcheck&utm_medium=web&utm_campaign=heart-week-2024&utm_content=web-pop-up"
               sx={{
                 marginTop: variable.spacer4,
                 fontWeight: variable.fontWeightSemiBold,
@@ -99,15 +99,15 @@ export default function Announcement() {
                 },
               }}
             >
-              REGISTER NOW
+              Learn More
             </Button>
           </Box>
           <Box
             sx={{
-              width: "calc(50% - 12px)",
+              width: "calc(45% - 12px)",
               height: "100%",
               float: "left",
-              background: "url('/assets/cmsImages/large-CVD webinar.png')",
+              background: "url('/assets/cmsImages/0324-HP-pop-up-banner.svg')",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
               backgroundPosition: "center",
@@ -131,6 +131,7 @@ export default function Announcement() {
               right: variable.spacer2,
               top: variable.spacer2,
               padding: 0,
+              color: variable.white,
               backgroundColor: "transparent",
               "&:hover": {
                 backgroundColor: "transparent",
