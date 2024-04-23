@@ -15,6 +15,7 @@ import variable from "../styles/theme/variables";
 import ArrowToBottom from "../public/assets/cmsImages/arrow-alt-to-bottom.svg";
 import CalculatorSolid from "../public/assets/cmsImages/calculator-solid.svg";
 import { getCacheTimeoutObj } from "../utility/cacheTimeout";
+import { url } from "inspector";
 
 const useStyles = createStyles((theme) => ({
   buttonAlt: {
@@ -172,6 +173,377 @@ const useStyles = createStyles((theme) => ({
       },
     },
 
+    "& .overview-infographic": {
+      marginTop: "50px",
+      marginBottom: "30px",
+      "& .overview-list": {
+        "& .overview-step": {
+          display: "flex",
+          position: "relative",
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: "12px",
+          backgroundColor: "#191B5E",
+          marginLeft: "-30px",
+          marginRight: "-30px",
+          marginTop: "5px",
+          listStyle: "none",
+          "& li": {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            maxWidth: "230px",
+            width: "20%",
+            "&:first-child": {
+              marginLeft: "90px",
+            },
+            "&:last-child": {
+              marginRight: "80px",
+            },
+            "& h2": {
+              marginTop: "10px",
+              marginBottom: "20px",
+              fontSize: variable.fontSizeBase,
+              fontWeight: variable.fontWeightMedium,
+              color: variable.white,
+              fontStyle: "normal",
+              lineHeight: "24px",
+            },
+          },
+          "& .step-image": {
+            display: "block",
+            marginTop: "-40px",
+            width: "80px",
+            height: "80px",
+            backgroundRepeat: "no-repeat",
+          },
+          "& .overview-step1-image": {
+            backgroundImage:
+              "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step1-image.svg')",
+          },
+          "& .overview-step2-image": {
+            backgroundImage:
+              "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step2-image.svg')",
+          },
+          "& .overview-step3-image": {
+            backgroundImage:
+              "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step3-image.svg')",
+          },
+          "& .overview-step4-image": {
+            backgroundImage:
+              "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step4-image.svg')",
+          },
+          "& .overview-step5-image": {
+            backgroundImage:
+              "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step5-image.svg')",
+          },
+        },
+      },
+      "& h2": {
+        marginTop: 0,
+        marginBottom: 0,
+      },
+      "& .verview-item": {
+        display: "flex",
+        justifyContent: "center",
+        gap: "90px",
+        "&.column_2": {
+          marginTop: "-15px",
+        },
+        "& .card": {
+          width: "310px",
+          height: "auto",
+          position: "relative",
+          padding: "25px 30px 15px 30px",
+          borderRadius: "16px 16px 0px 0px",
+          boxShadow: "4px 0px 12px rgba(0, 0, 0, 0.12)",
+          backgroundColor: "rgba(238, 241, 244, 1)",
+          "& h2": {
+            marginTop: 0,
+            fontSize: variable.fontSizeBase,
+            lineHeight: "16px",
+            fontWeight: variable.fontWeightBold,
+            color: variable.red300,
+            textAlign: "left",
+          },
+          "& h3": {
+            fontSize: variable.fontSizeXs,
+            lineHeight: "16px",
+            fontWeight: variable.fontWeightBold,
+            color: variable.black,
+          },
+          "& h5": {
+            marginTop: 0,
+            marginBottom: 0,
+          },
+          "& p": {
+            fontSize: variable.fontSizeXs,
+            lineHeight: "16px",
+          },
+          "& .box": {
+            marginTop: "12px",
+            padding: "15px 12px",
+            borderRadius: "12px",
+            border: "1px solid rgba(182, 198, 207, 1)",
+            backgroundColor: "rgba(249, 250, 251, 1)",
+            "& i": {
+              display: "inline-block",
+              width: "10px",
+              height: "10px",
+              marginRight: variable.spacer1,
+              verticalAlign: "middle",
+              backgroundRepeat: "no-repeat",
+            },
+            "& em": {
+              display: "inline-block",
+              width: "10px",
+              height: "10px",
+              marginRight: variable.spacer1,
+              verticalAlign: "middle",
+              backgroundRepeat: "no-repeat",
+            },
+            "& .high-risk-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/high-risk-icon_1.svg')",
+            },
+            "& .intermediate-risk-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/intermediate-risk-icon.svg')",
+            },
+            "& .low-risk-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/low-risk-icon.svg')",
+            },
+            "& strong": {
+              fontSize: variable.fontSizeXs,
+              fontWeight: variable.fontWeightBold,
+              color: variable.black,
+            },
+            "& span": {
+              fontSize: variable.fontSizeXs,
+              color: variable.black,
+            },
+          },
+          "& ul": {
+            paddingLeft: "14px",
+            "& li": {
+              marginBottom: variable.spacer1,
+              fontSize: variable.fontSizeXs,
+              lineHeight: "14px",
+              color: variable.black,
+              fontStyle: "normal",
+              listStyle: "disc",
+            },
+          },
+          "& .steps-icon": {
+            position: "absolute",
+            top: "18px",
+            left: "-17px",
+            width: "35px",
+            height: "35px",
+            backgroundRepeat: "no-repeat",
+          },
+          "&.steps_1": {
+            "& .steps-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step1-icon.svg')",
+            },
+          },
+          "&.steps_2": {
+            "& .steps-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step2-icon.svg')",
+            },
+            "& .variables": {
+              "&::before": {
+                content: `''`,
+                display: "table",
+              },
+              "&::after": {
+                content: `''`,
+                display: "table",
+                clear: "both",
+              },
+            },
+            "& .variables_left": {
+              width: "50%",
+              float: "left",
+            },
+            "& .variables_right": {
+              width: "50%",
+              float: "left",
+              "& h3": {
+                marginTop: 0,
+              },
+            },
+            "& .hight-message": {
+              padding: "10px",
+              borderRadius: "12px",
+              border: "1px solid rgba(182, 198, 207, 1)",
+              backgroundColor: "rgba(249, 250, 251, 1)",
+              "& .hight-message-icon": {
+                display: "inline-block",
+                float: "left",
+                width: "30px",
+                height: "30px",
+                marginRight: variable.spacer2,
+                marginTop: variable.spacer1,
+                backgroundRepeat: "no-repeat",
+                backgroundImage:
+                  "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/high-risk-icon.svg')",
+              },
+              "& p": {
+                display: "inline-block",
+                width: "calc(100% - 40px)",
+                fontSize: variable.fontSizeXXSmall,
+                lineHeight: "12px",
+                fontWeight: variable.fontWeightBold,
+                color: variable.black,
+              },
+            },
+            "& ul": {
+              marginTop: 0,
+            },
+          },
+          "&.steps_3": {
+            "& .steps-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step3-icon.svg')",
+            },
+            "& .box h5": {
+              fontSize: variable.fontSizeXSmall,
+            },
+            "& .box p": {
+              marginBottom: "2px",
+            },
+            "& .steps_5_list": {
+              marginBottom: "30px",
+              "&::before": {
+                content: `''`,
+                display: "table",
+              },
+              "&::after": {
+                content: `''`,
+                display: "table",
+                clear: "both",
+              },
+              "& ul": {
+                width: "50%",
+                float: "left",
+                "& li": {
+                  "& span": {
+                    paddingRight: variable.spacer1,
+                  },
+                  "& .icon": {
+                    display: "inline-block",
+                    width: "12px",
+                    height: "12px",
+                    verticalAlign: "top",
+                    backgroundRepeat: "no-repeat",
+                  },
+                  "& .angle-down": {
+                    backgroundImage:
+                      "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/arrow-down.svg')",
+                  },
+                  "& .angle-up": {
+                    backgroundImage:
+                      "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/arrow-up.svg')",
+                    marginLeft: variable.spacer1,
+                  },
+                },
+              },
+            },
+          },
+          "&.steps_4": {
+            "& .steps-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step4-icon.svg')",
+            },
+          },
+          "&.steps_5": {
+            "& .steps-icon": {
+              backgroundImage:
+                "url('https://d35rj4ptypp2hd.cloudfront.net/home-overview/overview-step5-icon.svg')",
+            },
+          },
+          "& .steps_5_left": {
+            width: "50%",
+            float: "left",
+          },
+          "& .steps_5_right": {
+            width: "50%",
+            float: "left",
+          },
+        },
+      },
+      "& .mobile": {
+        display: "none",
+      },
+      "@media (max-width: 1100px)": {
+        "& .desktop": {
+          display: "none",
+        },
+        "& .mobile": {
+          display: "block",
+          overflow: "hidden",
+          marginTop: "-50px",
+          marginLeft: "-32px",
+          marginRight: "-32px",
+          "& .overview-list": {
+            overflowX: "scroll",
+            paddingBottom: "20px",
+            paddingTop: "50px",
+            "& .overview-step": {
+              width: "2200px",
+              marginLeft: 0,
+              marginRight: 0,
+              marginTop: 0,
+              marginBottom: 0,
+              justifyContent: "flex-start",
+              borderRadius: 0,
+              "& li": {
+                marginLeft: "45px",
+                marginRight: "45px",
+                width: "360px",
+                maxWidth: "none",
+              },
+            },
+          },
+          "& .verview-item": {
+            display: "flex",
+            flexFlow: "wrap",
+            alignItems: "stretch",
+            justifycontent: "inherit",
+            width: "2200px",
+            "& .card": {
+              display: "flex",
+              width: "auto",
+              flex: "0 0 350px",
+              flexDirection: "column",
+            },
+          },
+        },
+      },
+      "@media (max-width: 480px)": {
+        "& .mobile": {
+          "& .overview-list": {
+            "& .overview-step": {
+              width: "1930px",
+              "& li": {
+                width: "300px",
+              },
+            },
+          },
+          "& .verview-item": {
+            width: "1925px",
+            "& .card": {
+              flex: "0 0 300px",
+            },
+          },
+        },
+      },
+    },
+
     "& figure": {
       marginTop: 0,
       marginBottom: 0,
@@ -273,7 +645,23 @@ export default function Home({ data }: HomeProps) {
             </Button.Group>
           </section>
 
-          <Container size={variable.breakpointAlt} px={variable.spacer4}>
+          <Container
+            size={variable.breakpointAlt}
+            px={variable.spacer4}
+            sx={{
+              "& .footnote": {
+                paddingTop: "30px",
+                "& li": {
+                  fontStyle: "normal",
+                  color: variable.black,
+                  "& sup": {
+                    fontSize: variable.fontSizeXXSmall,
+                    color: "rgba(25, 27, 94, 0.8)",
+                  },
+                },
+              },
+            }}
+          >
             {
               <div
                 className={classes.infographic}
